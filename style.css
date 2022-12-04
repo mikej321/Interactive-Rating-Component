@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  --overpass: 'Overpass', sans-serif;
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--overpass);
+  gap: 1rem;
+  max-width: 335px;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+.icon {
+  background-color: hsl(217, 12%, 63%, 0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.icon > img {
+  width: 15px;
+  height: 15px;
+}
+
+form > p:nth-child(2) {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+form > p:nth-child(3) {
+  color: var(--medium-grey);
+  line-height: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.button-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.button-flex > button {
+  background-color: hsl(217, 12%, 63%, 0.1);
+  color: var(--medium-grey);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: none;
+  font-family: var(--overpass);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button-flex > button:hover {
+  background-color: var(--orange);
+  color: white;
+  transition: background-color 0.5s ease-in-out,
+              color 0.5s ease-in-out; 
+}
+
+.button-flex > button:focus {
+  background-color: var(--light-grey);
+  color: white;
+  transition: background-color 0.5s ease-in-out,
+              color 0.5s ease-in-out;
+}
+
+form > button {
+  height: 45px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--orange);
+  font-size: 1.4rem;
+  font-family: var(--overpass);
+  color: var(--white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+form > button:hover {
+  color: var(--orange);
+  background-color: var(--white);
+  transition: background-color 0.5s ease-in-out,
+              color 0.5s ease-in-out;
+}
+
+
+ 
+.thanks {
+  max-width: 335px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 3rem;
+  border-radius: 16px;
+  font-family: var(--overpass);
+}
+
+.thanks > img {
+  width: 150px;
+}
+
+.selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(217, 12%, 63%, 0.1);
+  color: var(--orange);
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 50px;
+}
+
+.thanks > p:nth-child(3) {
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+}
+
+.thanks > p:nth-child(4) {
+  text-align: center;
+  color: var(--medium-grey);
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+.attribution {
+  color: white;
+  position: relative;
+  top: 3rem;
+}
+
+@media (min-width: 600px) {
+  form {
+    max-width: 380px;
+  }
+
+  .icon {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .button-flex {
+    max-width: 325px;
+  }
+}
