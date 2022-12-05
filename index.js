@@ -12,8 +12,8 @@ const thanks = document.querySelector('.thanks');
 const buttons = document.querySelectorAll('.choice-button');
 const submit = document.querySelector('.submit-button');
 let selectedValue = document.querySelector('.selected-value');
-const empty = document.querySelector('.empty');
-const body = document.querySelector('body');
+
+
 const attribution = document.querySelector('.attribution');
 thanks.style.display = 'none';
 let value;
