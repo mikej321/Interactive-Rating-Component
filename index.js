@@ -9,10 +9,33 @@
 // output the clicked value into the thanks form
 const mainForm = document.querySelector('.main-form');
 const thanks = document.querySelector('.thanks');
-const buttons = document.querySelector('.choice-button');
+const buttons = document.querySelectorAll('.choice-button');
 const submit = document.querySelector('.submit-button');
-const selectedValue = document.querySelector('.selected-value');
-
+let selectedValue = document.querySelector('.selected-value');
+const empty = document.querySelector('.empty');
+const body = document.querySelector('body');
+const attribution = document.querySelector('.attribution');
+thanks.style.display = 'none';
 let value;
 
-thanks.remove();
+buttons.forEach(function(i) {
+  i.addEventListener('click', function() {
+    value = this.value;
+  })
+})
+
+
+submit.addEventListener('click', function(i) {
+  mainForm.remove()
+  
+  attribution.remove();
+  
+  selectedValue.innerText = value;
+  
+  thanks.style.display = 'flex';
+  document.body.append(attribution);
+  
+  
+})
+
+

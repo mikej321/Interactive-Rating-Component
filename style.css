@@ -135,7 +135,9 @@ form > button:hover {
               color 0.5s ease-in-out;
 }
 
-
+.empty {
+  display: block;
+}
  
 .thanks {
   max-width: 335px;
