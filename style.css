@@ -110,8 +110,15 @@ form > p:nth-child(3) {
 .button-flex > button:focus {
   background-color: var(--light-grey);
   color: white;
-  transition: background-color 0.5s ease-in-out,
-              color 0.5s ease-in-out;
+  transition: background-color 0.4s ease-in-out,
+              color 0.4s ease-in-out;
+}
+
+.button-flex > button:active {
+  background-color: var(--light-grey);
+  color: white;
+  transition: background-color 0.1s ease-in-out,
+              color 0.1s ease-in-out; 
 }
 
 form > button {
@@ -128,7 +135,7 @@ form > button {
   cursor: pointer;
 }
 
-form > button:hover {
+form > button:active {
   color: var(--orange);
   background-color: var(--white);
   transition: background-color 0.5s ease-in-out,
@@ -159,8 +166,6 @@ form > button:hover {
 
 .selection {
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: hsl(217, 12%, 63%, 0.1);
   color: var(--orange);
   font-size: 1.5rem;

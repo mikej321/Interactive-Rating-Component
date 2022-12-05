@@ -26,6 +26,10 @@ buttons.forEach(function(i) {
 
 
 submit.addEventListener('click', function(i) {
+  if (value === undefined) {
+    alert('You must select a rating first!');
+    return;
+  }
   mainForm.remove()
   
   attribution.remove();
